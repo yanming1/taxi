@@ -2,26 +2,20 @@
 #应用名称及验证账号
 spring: 
   application: 
-    name: eureka
+    name: gateway
   security: 
     user: 
       name: root
       password: root
 eureka:
   client:
-    register-with-eureka: false
-    fetch-registry: false
     service-url:
       defaultZone: http://root:root@localhost:7900/eureka/
   instance:
     hostname: localhost
-  server: 
-    #关闭自我保护
-    enable-self-preservation: false
-    #清理间隔时间
-    eviction-interval-timer-in-ms: 5000
+    instance-id: gateway
 logging:
   level:
     root: info
 server:
-  port: 7900
+  port: 9100
