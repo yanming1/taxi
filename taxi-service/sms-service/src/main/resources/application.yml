@@ -1,0 +1,21 @@
+#单节点
+#应用名称及验证账号
+spring: 
+  application: 
+    name: sms
+  security: 
+    user: 
+      name: root
+      password: root
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:root@localhost:7900/eureka/
+  instance:
+    hostname: localhost
+    instance-id: sms
+logging:
+  level:
+    root: info
+server:
+  port: 8001
